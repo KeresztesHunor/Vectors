@@ -11,18 +11,22 @@ namespace Vectors
 
         public Vector2<T> xy { get; }
         public Vector2<T> yx { get => xy.yx; }
-        public Vector3<T> xzy { get => new Vector3<T>(xy.x, z, xy.y); }
-        public Vector3<T> yxz { get => new Vector3<T>(xy.yx, z); }
-        public Vector3<T> yzx { get => new Vector3<T>(xy.y, z, xy.x); }
-        public Vector3<T> zxy { get => new Vector3<T>(z, xy.x, xy.y); }
-        public Vector3<T> zyx { get => new Vector3<T>(z, xy.yx); }
+        public Vector2<T> xz { get => new Vector2<T>(x, z); }
+        public Vector2<T> zx { get => new Vector2<T>(z, x); }
+        public Vector2<T> yz { get => new Vector2<T>(y, z); }
+        public Vector2<T> zy { get => new Vector2<T>(z, y); }
+        public Vector3<T> xzy { get => new Vector3<T>(xz, y); }
+        public Vector3<T> yxz { get => new Vector3<T>(yx, z); }
+        public Vector3<T> yzx { get => new Vector3<T>(yz, x); }
+        public Vector3<T> zxy { get => new Vector3<T>(zx, y); }
+        public Vector3<T> zyx { get => new Vector3<T>(zy, x); }
 
         public Vector3(T x, T y, T z) : this(new Vector2<T>(x, y), z)
         {
             
         }
 
-        public Vector3(T x, Vector2<T> yz) : this(new Vector2<T>(x, yz.x), yz.y) // yz.x is the y component and yz.y is the z component
+        public Vector3(T x, Vector2<T> yz) : this(x, yz.x, yz.y)
         {
 
         }
