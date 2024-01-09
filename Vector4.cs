@@ -61,5 +61,7 @@ namespace Vectors
 
         public static bool operator ==(Vector4<T> left, Vector4<T> right) => left.xyz == right.xyz && left.w.Equals(right.w);
         public static bool operator !=(Vector4<T> left, Vector4<T> right) => left.xyz != right.xyz || !left.w.Equals(right.w);
+        public static Vector4<T> operator +(Vector4<T> left, Vector4<T> right) => new Vector4<T>(left.xyz + right.xyz, left.w + right.w);
+        public static Vector4<T> operator -(Vector4<T> left, Vector4<T> right) => new Vector4<T>(left.xyz - right.xyz, left.w - right.w);
     }
 }
