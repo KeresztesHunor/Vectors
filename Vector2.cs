@@ -32,8 +32,8 @@ namespace Vectors
         }
 
         public static bool operator ==(Vector2<T> left, Vector2<T> right) => left.x.Equals(right.x) && left.y.Equals(right.y);
-        public static bool operator !=(Vector2<T> left, Vector2<T> right) => !left.x.Equals(right.x) || !left.y.Equals(right.y);
-        public static Vector2<T> operator +(Vector2<T> left, Vector2<T> right) => new Vector2<T>(left.x + right.x, left.y + right.y);
-        public static Vector2<T> operator -(Vector2<T> left, Vector2<T> right) => new Vector2<T>(left.x - right.x, left.y - right.y);
+        public static bool operator !=(Vector2<T> left, Vector2<T> right) => !(left == right);
+        public static Vector2<T> operator +(Vector2<T> left, Vector2<T> right) => new Vector2<T>((dynamic)left.x + (dynamic)right.x, (dynamic)left.y + (dynamic)right.y);
+        public static Vector2<T> operator -(Vector2<T> left, Vector2<T> right) => new Vector2<T>((dynamic)left.x - (dynamic)right.x, (dynamic)left.y - (dynamic)right.y);
     }
 }

@@ -12,17 +12,17 @@ namespace Vectors
         
         public Vector3<T> xyz { get; }
 
-        public Vector4(T x, T y, T z, T w) : this(new Vector3(x, y, z), w)
+        public Vector4(T x, T y, T z, T w) : this(new Vector3<T>(x, y, z), w)
         {
 
         }
 
         public Vector4(Vector2<T> xy, T z, T w) : this(xy.x, xy.y, z, w)
         {
-
+            
         }
 
-        public Vector4(T x, Vector2<T> yz, T z) : this(x, yz.x, yz.y, w)
+        public Vector4(T x, Vector2<T> yz, T w) : this(x, yz.x, yz.y, w)
         {
 
         }
@@ -64,8 +64,8 @@ namespace Vectors
         }
 
         public static bool operator ==(Vector4<T> left, Vector4<T> right) => left.xyz == right.xyz && left.w.Equals(right.w);
-        public static bool operator !=(Vector4<T> left, Vector4<T> right) => left.xyz != right.xyz || !left.w.Equals(right.w);
-        public static Vector4<T> operator +(Vector4<T> left, Vector4<T> right) => new Vector4<T>(left.xyz + right.xyz, left.w + right.w);
-        public static Vector4<T> operator -(Vector4<T> left, Vector4<T> right) => new Vector4<T>(left.xyz - right.xyz, left.w - right.w);
+        public static bool operator !=(Vector4<T> left, Vector4<T> right) => !(left == right);
+        public static Vector4<T> operator +(Vector4<T> left, Vector4<T> right) => new Vector4<T>(left.xyz + right.xyz, (dynamic)left.w + (dynamic)right.w);
+        public static Vector4<T> operator -(Vector4<T> left, Vector4<T> right) => new Vector4<T>(left.xyz - right.xyz, (dynamic)left.w - (dynamic)right.w);
     }
 }
