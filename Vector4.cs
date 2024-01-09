@@ -5,6 +5,9 @@ namespace Vectors
 {
     struct Vector4<T> : IEquatable<Vector4<T>> where T : struct, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
     {
+        public T x { get => xyz.x; }
+        public T y { get => xyz.y; }
+        public T z { get => xyz.z; }
         public Vector3<T> xyz { get; }
         public T w { get; }
 
