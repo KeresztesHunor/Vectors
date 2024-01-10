@@ -44,6 +44,6 @@ namespace Vectors
         public static bool operator !=(Vector2<T> left, Vector2<T> right) => !(left == right);
         public static Vector2<T> operator +(Vector2<T> left, Vector2<T> right) => new Vector2<T>((dynamic)left.x + (dynamic)right.x, (dynamic)left.y + (dynamic)right.y);
         public static Vector2<T> operator -(Vector2<T> left, Vector2<T> right) => new Vector2<T>((dynamic)left.x - (dynamic)right.x, (dynamic)left.y - (dynamic)right.y);
-        public static Vector2<T> operator -(Vector2<T> value) => new Vector2<T>(-(dynamic)x, -(dynamic)y);
+        public static Vector2<T> operator -(Vector2<T> value) => new Vector2<T>(-(dynamic)value.x, -(dynamic)value.y);
     }
 }

@@ -139,6 +139,6 @@ namespace Vectors
         public static bool operator !=(Vector4<T> left, Vector4<T> right) => !(left == right);
         public static Vector4<T> operator +(Vector4<T> left, Vector4<T> right) => new Vector4<T>(left.xyz + right.xyz, (dynamic)left.w + (dynamic)right.w);
         public static Vector4<T> operator -(Vector4<T> left, Vector4<T> right) => new Vector4<T>(left.xyz - right.xyz, (dynamic)left.w - (dynamic)right.w);
-        public static Vector4<T> operator -(Vector4<T> value) => new Vector4<T>(-value.xyz, -(dynamic)w);
+        public static Vector4<T> operator -(Vector4<T> value) => new Vector4<T>(-value.xyz, -(dynamic)value.w);
     }
 }
