@@ -68,5 +68,6 @@ namespace Vectors
         public static bool operator !=(Vector3<T> left, Vector3<T> right) => !(left == right);
         public static Vector3<T> operator +(Vector3<T> left, Vector3<T> right) => new Vector3<T>(left.xy + right.xy, (dynamic)left.z + (dynamic)right.z);
         public static Vector3<T> operator -(Vector3<T> left, Vector3<T> right) => new Vector3<T>(left.xy - right.xy, (dynamic)left.z - (dynamic)right.z);
+        public static Vector3<T> operator -(Vector3<T> value) => new Vector3<T>(-value.xy, -(dynamic)z);
     }
 }
