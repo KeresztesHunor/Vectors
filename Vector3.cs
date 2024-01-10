@@ -9,6 +9,16 @@ namespace Vectors
         public T y { get => xy.y; }
         public T z { get; }
 
+        public double Length { get => Math.Sqrt(xd * xd + yd * yd + zd * zd); }
+        double xd { get => x.ToDouble(null); }
+        double yd { get => y.ToDouble(null); }
+        double zd { get => z.ToDouble(null); }
+
+        public float LengthF { get => MathF.Sqrt(xf * xf + yf * yf + zf * zf); }
+        float xf { get => x.ToSingle(null); }
+        float yf { get => y.ToSingle(null); }
+        float zf { get => z.ToSingle(null); }
+
         public Vector2<T> xy { get; }
         public Vector2<T> yx { get => xy.yx; }
         public Vector2<T> xz { get => new Vector2<T>(x, z); }
@@ -20,6 +30,8 @@ namespace Vectors
         public Vector3<T> yzx { get => new Vector3<T>(yz, x); }
         public Vector3<T> zxy { get => new Vector3<T>(zx, y); }
         public Vector3<T> zyx { get => new Vector3<T>(zy, x); }
+        public Vector3<double> Normalized { get => new Vector3<double>(xd / Length, yd / Length, zd / Length); }
+        public Vector3<float> NormalizedF { get => new Vector3<float>(xf / LengthF, yf / LengthF, zf / LengthF); }
 
         public Vector3(T x, T y, T z) : this(new Vector2<T>(x, y), z)
         {
@@ -44,12 +56,12 @@ namespace Vectors
 
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return base.GetHashCode(); // TODO: check how the "GetHashCode" method works and correct code accordingly
         }
 
         public bool Equals(Vector3<T> other)
         {
-            return this == other;
+            return this == other; // TODO: check how overloading the "=="/"!=" operators and the "Equals" method work and correct code accordingly
         }
 
         public static bool operator ==(Vector3<T> left, Vector3<T> right) => left.xy == right.xy && left.z.Equals(right.z);
