@@ -15,10 +15,10 @@ namespace Vectors
         float xf { get => x.ToSingle(null); }
         float yf { get => y.ToSingle(null); }
 
-        public static Vector2<T> Zero { get => new Vector2<T>(); }
         public Vector2<T> yx { get => new Vector2<T>(y, x); }
         public Vector2<double> Normalized { get => new Vector2<double>(xd / Length, yd / Length); }
         public Vector2<float> NormalizedF { get => new Vector2<float>(xf / LengthF, yf / LengthF); }
+        public static Vector2<T> Zero { get => new Vector2<T>(); }
 
         public Vector2(T x, T y)
         {

@@ -83,7 +83,8 @@ namespace Vectors
         public Vector4<T> wzyx { get => new Vector4<T>(wzy, x); }
         public Vector4<double> Normalized { get => new Vector4<double>(xd / Length, yd / Length, zd / Length, wd / Length); }
         public Vector4<float> NormalizedF { get => new Vector4<float>(xf / LengthF, yf / LengthF, zf / LengthF, wf / LengthF); }
-        
+        public static Vector4<T> Zero { get => new Vector4<T>(); }
+
         public Vector4(T x, T y, T z, T w) : this(new Vector3<T>(x, y, z), w)
         {
 

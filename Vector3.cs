@@ -32,6 +32,7 @@ namespace Vectors
         public Vector3<T> zyx { get => new Vector3<T>(zy, x); }
         public Vector3<double> Normalized { get => new Vector3<double>(xd / Length, yd / Length, zd / Length); }
         public Vector3<float> NormalizedF { get => new Vector3<float>(xf / LengthF, yf / LengthF, zf / LengthF); }
+        public static Vector3<T> Zero { get => new Vector3<T>(); }
 
         public Vector3(T x, T y, T z) : this(new Vector2<T>(x, y), z)
         {
