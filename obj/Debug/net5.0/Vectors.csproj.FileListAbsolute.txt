@@ -1,0 +1,16 @@
+C:\Users\Keresztes László\source\repos\Vectors\bin\Debug\net5.0\Vectors.exe
+C:\Users\Keresztes László\source\repos\Vectors\bin\Debug\net5.0\Vectors.deps.json
+C:\Users\Keresztes László\source\repos\Vectors\bin\Debug\net5.0\Vectors.runtimeconfig.json
+C:\Users\Keresztes László\source\repos\Vectors\bin\Debug\net5.0\Vectors.runtimeconfig.dev.json
+C:\Users\Keresztes László\source\repos\Vectors\bin\Debug\net5.0\Vectors.dll
+C:\Users\Keresztes László\source\repos\Vectors\bin\Debug\net5.0\ref\Vectors.dll
+C:\Users\Keresztes László\source\repos\Vectors\bin\Debug\net5.0\Vectors.pdb
+C:\Users\Keresztes László\source\repos\Vectors\obj\Debug\net5.0\Vectors.csprojAssemblyReference.cache
+C:\Users\Keresztes László\source\repos\Vectors\obj\Debug\net5.0\Vectors.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Keresztes László\source\repos\Vectors\obj\Debug\net5.0\Vectors.AssemblyInfoInputs.cache
+C:\Users\Keresztes László\source\repos\Vectors\obj\Debug\net5.0\Vectors.AssemblyInfo.cs
+C:\Users\Keresztes László\source\repos\Vectors\obj\Debug\net5.0\Vectors.csproj.CoreCompileInputs.cache
+C:\Users\Keresztes László\source\repos\Vectors\obj\Debug\net5.0\Vectors.dll
+C:\Users\Keresztes László\source\repos\Vectors\obj\Debug\net5.0\ref\Vectors.dll
+C:\Users\Keresztes László\source\repos\Vectors\obj\Debug\net5.0\Vectors.pdb
+C:\Users\Keresztes László\source\repos\Vectors\obj\Debug\net5.0\Vectors.genruntimeconfig.cache

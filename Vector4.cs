@@ -122,17 +122,22 @@ namespace Vectors
 
         public override bool Equals(object obj)
         {
-            return base.Equals(obj);
+            return obj is Vector4<T> v ? this == v : false;
         }
 
         public override int GetHashCode()
         {
-            return base.GetHashCode(); // TODO: check how the "GetHashCode" method works and correct code accordingly
+            return (391 + xyz.GetHashCode()) * 23 + w.GetHashCode();
         }
 
         public bool Equals(Vector4<T> other)
         {
-            return this == other; // TODO: check how overloading the "=="/"!=" operators and the "Equals" method work and correct code accordingly
+            return this == other;
+        }
+
+        public override string ToString()
+        {
+            return xyz.ToString() + ", w: " + w;
         }
 
         public static bool operator ==(Vector4<T> left, Vector4<T> right) => left.xyz == right.xyz && left.w.Equals(right.w);
